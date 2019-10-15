@@ -41,14 +41,13 @@ public class LinkedList {
 
 	public String remove(int i) {
 		// TODO Auto-generated method stub
+		String temp = this.get(i);
 		if (size == 1) {
-			String returner = this.get(i);
 			this.head = null;
 			this.size = 0;
-			return returner;
+			return temp;
 		}
 		size--;
-		String temp = this.get(i);
 		Node curr = this.head;
 		for (int j = 0; j < i; j++) {
 			curr = curr.next;
